@@ -12,9 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/01-Bus.unity
     guid: 5e4251b3565161a478da21d4f903e8ee
   - enabled: 1
-    path: Assets/Scenes/02-WalkStreet.unity
+    path: Assets/Scenes/02-OnBus.unity
     guid: 743baaeb47511fe4e8563125cc72cbc4
   - enabled: 1
-    path: Assets/Scenes/03-End.unity
+    path: Assets/Scenes/03-WalkStreet.unity
     guid: 6a3af739c27a37b4babeffcdf975ffcd
+  - enabled: 1
+    path: Assets/Scenes/04-End.unity
+    guid: 813b425417f9e014584931f40b13f942
   m_configObjects: {}

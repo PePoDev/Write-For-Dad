@@ -7,11 +7,12 @@ public class Draw : MonoBehaviour
 {
 	public GameObject[] trailBrushPrefab;
 	public GameObject[] paintPrefab;
-	
+
 	public int selectedIndex { get; set; } = -1;
 	public bool isBrush { get; set; } = false;
 	public bool CanDrawOnPanel { get; set; } = false;
 
+	[SerializeField] private DrawGameManager gameManager;
 	private GameObject currentTrail;
 	private Vector3 startPosition;
 	private Plane objPlane;
@@ -28,7 +29,7 @@ public class Draw : MonoBehaviour
 	{
 		if (selectedIndex < 0 || !CanDrawOnPanel)
 			return;
-		
+
 		if (isBrush)
 		{
 			if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) || Input.GetMouseButtonDown(0))
@@ -53,6 +54,20 @@ public class Draw : MonoBehaviour
 				if (objPlane.Raycast(mRay, out rayDistance))
 				{
 					currentTrail.transform.position = mRay.GetPoint(rayDistance);
+				}
+
+				switch (selectedIndex)
+				{
+					case 0:
+					case 1:
+						gameManager.baseScore = gameManager.baseScore < 10? 10 : gameManager.baseScore;
+						break;
+					case 2:
+						gameManager.baseScore = gameManager.baseScore < 40? 40 : gameManager.baseScore;
+						break;
+					case 3:
+						gameManager.baseScore = gameManager.baseScore < 70? 70 : gameManager.baseScore;
+						break;
 				}
 			}
 			else if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended) || Input.GetMouseButtonUp(0))

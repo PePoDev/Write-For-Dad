@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class DrawGameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public int baseScore = 0;
+	private int score = 0;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public void TimeUp()
+	{
+		score += baseScore;
+
+	}
 }
