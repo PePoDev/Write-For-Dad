@@ -13,6 +13,7 @@ public class TimerController : MonoBehaviour
 	public float TimeToCapture;
 
 	public UnityEvent OnTimeUp;
+	public UnityEvent OnStart;
 
 	private float _timer;
 	private bool isStarted = false;
@@ -36,6 +37,8 @@ public class TimerController : MonoBehaviour
 			if (_timer > TimeToCapture)
 			{
 				_timer -= TimeToCapture;
+
+				StopTimer();
 				OnTimeUp.Invoke();
 			}
 		}
@@ -44,6 +47,10 @@ public class TimerController : MonoBehaviour
 	public void StartTimer()
 	{
 		isStarted = true;
+		if (OnStart != null)
+		{
+			OnStart.Invoke();
+		}
 	}
 
 	public void StopTimer()
