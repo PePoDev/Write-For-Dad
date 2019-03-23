@@ -5,15 +5,16 @@ using UnityEngine.UI;
 
 public class Draw : MonoBehaviour
 {
+	public DrawGameManager gameManager;
 	public GameObject[] trailBrushPrefab;
 	public GameObject[] paintPrefab;
+	public RectTransform mainCanvas;
 
 	public int selectedIndex { get; set; } = -1;
 	public bool isBrush { get; set; } = false;
 	public bool isStarted { get; set; } = false;
 	public bool CanDrawOnPanel { get; set; } = false;
 
-	[SerializeField] private DrawGameManager gameManager;
 	private GameObject currentTrail;
 	private Vector3 startPosition;
 	private Plane objPlane;
@@ -35,6 +36,7 @@ public class Draw : MonoBehaviour
 
 		if (isBrush)
 		{
+			// On touch or click began
 			if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) || Input.GetMouseButtonDown(0))
 			{
 				mRay = Cam.ScreenPointToRay(Input.mousePosition);
@@ -62,10 +64,14 @@ public class Draw : MonoBehaviour
 						break;
 				}
 			}
+
+			// On touch or click moved
 			else if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved) || Input.GetMouseButton(0))
 			{
 				if (currentTrail == null)
+				{
 					return;
+				}
 
 				mRay = Cam.ScreenPointToRay(Input.mousePosition);
 				float rayDistance;
@@ -76,6 +82,8 @@ public class Draw : MonoBehaviour
 
 				gameManager.score += (int)(30f * Time.deltaTime);
 			}
+
+			// On touch or click end
 			else if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended) || Input.GetMouseButtonUp(0))
 			{
 				if (currentTrail == null)
@@ -89,19 +97,29 @@ public class Draw : MonoBehaviour
 		}
 		else
 		{
-			switch (selectedIndex)
+			if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) || Input.GetMouseButtonDown(0))
 			{
-				case 1:
-					gameManager.baseScore = gameManager.baseScore < 10 ? 10 : gameManager.baseScore;
-					break;
-				case 0:
-					gameManager.baseScore = gameManager.baseScore < 40 ? 10 : gameManager.baseScore;
-					break;
-				case 2:
-					gameManager.baseScore = gameManager.baseScore < 70 ? 40 : gameManager.baseScore;
-					break;
+				RectTransform obj = Instantiate(paintPrefab[selectedIndex].GetComponent<RectTransform>(), mainCanvas);
+
+				Vector2 outPosition;
+				RectTransformUtility.ScreenPointToLocalPointInRectangle(mainCanvas, Input.mousePosition, Camera.main, out outPosition);
+				obj.anchoredPosition = outPosition;
+
+				switch (selectedIndex)
+				{
+					case 1:
+						gameManager.baseScore = gameManager.baseScore < 10 ? 10 : gameManager.baseScore;
+						break;
+					case 0:
+						gameManager.baseScore = gameManager.baseScore < 40 ? 10 : gameManager.baseScore;
+						break;
+					case 2:
+						gameManager.baseScore = gameManager.baseScore < 70 ? 40 : gameManager.baseScore;
+						break;
+				}
+
+				gameManager.score += 1;
 			}
 		}
-
 	}
 }

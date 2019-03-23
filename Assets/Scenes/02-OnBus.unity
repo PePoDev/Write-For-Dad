@@ -424,9 +424,12 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133281757}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 0.0065104165, y: 0.0065104165, z: 0.0065104165}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.0065158065, y: 0.0065158065, z: 0.0065158065}
   m_Children:
+  - {fileID: 1730841907}
+  - {fileID: 271844607}
+  - {fileID: 714023744}
   - {fileID: 1208389920}
   - {fileID: 1433063968}
   - {fileID: 1243165187}
@@ -438,7 +441,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2048, y: 1536}
+  m_SizeDelta: {x: 2048, y: 1534.7294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &217372636
 GameObject:
@@ -553,7 +556,7 @@ Transform:
   - {fileID: 1479728843}
   - {fileID: 998334429}
   m_Father: {fileID: 133281761}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &271844606
 GameObject:
@@ -580,17 +583,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271844606}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1452792832}
-  m_RootOrder: 5
+  m_Father: {fileID: 133281761}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -2.4001, y: 0}
+  m_SizeDelta: {x: 206.69995, y: 204.70001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &271844608
 MonoBehaviour:
@@ -605,14 +608,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cab1ad536e7d6544fa5feb9cb055cafb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c06319f85c78c8c4888143349d6fae21, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -846,7 +849,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.1796875
+        value: 0.125
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1203,17 +1206,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 714023743}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1452792832}
-  m_RootOrder: 6
+  m_Father: {fileID: 133281761}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -452, y: 265}
+  m_SizeDelta: {x: 295.2, y: 133.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &714023745
 MonoBehaviour:
@@ -1228,14 +1231,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cab1ad536e7d6544fa5feb9cb055cafb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f22ca36e438a4b408770338e3ac16c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1284,7 +1287,7 @@ RectTransform:
   - {fileID: 1687091339}
   - {fileID: 1742332774}
   m_Father: {fileID: 133281761}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1364,8 +1367,8 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 2062922278}
-    ActiveGameObject: {fileID: 2062922278}
+    - {fileID: 1730841906}
+    ActiveGameObject: {fileID: 1730841906}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -1376,32 +1379,8 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1323102780}
-    ActiveGameObject: {fileID: 1323102780}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 1393081004}
-    ActiveGameObject: {fileID: 1393081004}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 467633214}
-    ActiveGameObject: {fileID: 467633214}
+    - {fileID: 1956385450}
+    ActiveGameObject: {fileID: 1956385450}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -1424,8 +1403,8 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1433063967}
-    ActiveGameObject: {fileID: 1433063967}
+    - {fileID: 714023743}
+    ActiveGameObject: {fileID: 714023743}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -1448,8 +1427,32 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1243165186}
-    ActiveGameObject: {fileID: 1243165186}
+    - {fileID: 662930975}
+    ActiveGameObject: {fileID: 662930975}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 271844606}
+    ActiveGameObject: {fileID: 271844606}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 840364048}
+    ActiveGameObject: {fileID: 840364048}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -1472,42 +1475,6 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1431852809}
-    ActiveGameObject: {fileID: 1431852809}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 217372636}
-    ActiveGameObject: {fileID: 217372636}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 714023743}
-    ActiveGameObject: {fileID: 714023743}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
     - {fileID: 261652320}
     ActiveGameObject: {fileID: 261652320}
     GUIDsList: []
@@ -1520,8 +1487,8 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1742332772}
-    ActiveGameObject: {fileID: 1742332772}
+    - {fileID: 1430173229}
+    ActiveGameObject: {fileID: 1430173229}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -1556,8 +1523,8 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1430173229}
-    ActiveGameObject: {fileID: 1430173229}
+    - {fileID: 1433063967}
+    ActiveGameObject: {fileID: 1433063967}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -1568,8 +1535,8 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 271844606}
-    ActiveGameObject: {fileID: 271844606}
+    - {fileID: 467633214}
+    ActiveGameObject: {fileID: 467633214}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -1580,8 +1547,8 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1730841906}
-    ActiveGameObject: {fileID: 1730841906}
+    - {fileID: 1323102780}
+    ActiveGameObject: {fileID: 1323102780}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -1592,8 +1559,8 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1956385450}
-    ActiveGameObject: {fileID: 1956385450}
+    - {fileID: 1393081004}
+    ActiveGameObject: {fileID: 1393081004}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -1604,8 +1571,56 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 840364048}
-    ActiveGameObject: {fileID: 840364048}
+    - {fileID: 2062922278}
+    ActiveGameObject: {fileID: 2062922278}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 1243165186}
+    ActiveGameObject: {fileID: 1243165186}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 1431852809}
+    ActiveGameObject: {fileID: 1431852809}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 217372636}
+    ActiveGameObject: {fileID: 217372636}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 1742332772}
+    ActiveGameObject: {fileID: 1742332772}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -1630,24 +1645,6 @@ MonoBehaviour:
     list:
     - {fileID: 1221120225}
     ActiveGameObject: {fileID: 1221120225}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 302235489}
-    - {fileID: 1108963319}
-    - {fileID: 63115745}
-    - {fileID: 1441173247}
-    - {fileID: 1430173229}
-    - {fileID: 1479728842}
-    - {fileID: 998334428}
-    ActiveGameObject: {fileID: 302235489}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -2133,11 +2130,11 @@ RectTransform:
   m_Children:
   - {fileID: 1221120226}
   m_Father: {fileID: 133281761}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1024, y: 1.8495}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 1.8494873}
   m_SizeDelta: {x: 2043.2, y: 1532.3}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1208389921
@@ -2451,7 +2448,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 133281761}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2798,7 +2795,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.2265625
+        value: 0.2890625
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -3316,11 +3313,11 @@ RectTransform:
   m_Children:
   - {fileID: 1396188223}
   m_Father: {fileID: 133281761}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000061035156}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1433063969
@@ -3603,6 +3600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799b6439175a74146be7ff8ec67e119a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1956385451}
   trailBrushPrefab:
   - {fileID: 467633214}
   - {fileID: 1393081004}
@@ -3612,7 +3610,7 @@ MonoBehaviour:
   - {fileID: 1730841906}
   - {fileID: 271844606}
   - {fileID: 714023743}
-  gameManager: {fileID: 1956385451}
+  mainCanvas: {fileID: 133281761}
 --- !u!4 &1452792832
 Transform:
   m_ObjectHideFlags: 0
@@ -3628,9 +3626,6 @@ Transform:
   - {fileID: 1393081005}
   - {fileID: 1323102781}
   - {fileID: 2062922279}
-  - {fileID: 1730841907}
-  - {fileID: 271844607}
-  - {fileID: 714023744}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4033,17 +4028,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730841906}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1452792832}
-  m_RootOrder: 4
+  m_Father: {fileID: 133281761}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 290.7, y: 237.3}
+  m_SizeDelta: {x: 322.7, y: 322.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1730841908
 MonoBehaviour:
@@ -4058,14 +4053,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cab1ad536e7d6544fa5feb9cb055cafb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4099f6948baa3fc4297febc48c05c23f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4203,6 +4198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DrawComponent: {fileID: 1452792831}
+  scoreUI: {fileID: 1316597070}
   baseScore: 0
   score: 0
 --- !u!4 &1956385452
@@ -4297,7 +4293,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.2265625
+        value: 0.40625
         inSlope: 0
         outSlope: 0
         tangentMode: 0
