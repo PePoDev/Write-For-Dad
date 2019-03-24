@@ -21,7 +21,7 @@ public class Draw : MonoBehaviour
 	private Camera Cam;
 	private Ray mRay;
 
-	private int currentOrder = 0;
+	private int currentOrder = 1;
 
 	private void Start()
 	{
@@ -80,7 +80,7 @@ public class Draw : MonoBehaviour
 					currentTrail.transform.position = mRay.GetPoint(rayDistance);
 				}
 
-				gameManager.score += (int)(30f * Time.deltaTime);
+				gameManager.score += 30f / 20f * Time.deltaTime;
 			}
 
 			// On touch or click end
@@ -99,11 +99,12 @@ public class Draw : MonoBehaviour
 		{
 			if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) || Input.GetMouseButtonDown(0))
 			{
-				RectTransform obj = Instantiate(paintPrefab[selectedIndex].GetComponent<RectTransform>(), mainCanvas);
-
-				Vector2 outPosition;
-				RectTransformUtility.ScreenPointToLocalPointInRectangle(mainCanvas, Input.mousePosition, Camera.main, out outPosition);
-				obj.anchoredPosition = outPosition;
+				Vector3 screenPos = Cam.ScreenToWorldPoint(Input.mousePosition);
+				SpriteRenderer obj = Instantiate(
+					paintPrefab[selectedIndex].GetComponent<SpriteRenderer>(),
+					new Vector2(screenPos.x, screenPos.y),
+					Quaternion.identity);
+				obj.sortingOrder = currentOrder++;
 
 				switch (selectedIndex)
 				{
@@ -118,7 +119,7 @@ public class Draw : MonoBehaviour
 						break;
 				}
 
-				gameManager.score += 1;
+				gameManager.score += 2;
 			}
 		}
 	}
