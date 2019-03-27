@@ -6,9 +6,12 @@ using UnityEngine;
 public class DrawGameManager : MonoBehaviour
 {
 	public Draw DrawComponent;
+	public TimerController timerController;
 
 	public RectTransform ProgressBus;
 	public TextMeshProUGUI scoreUI;
+
+    private Vector2 defaultBusSize;
 
 	public float baseScore = 0;
 	public float score = 0;
@@ -26,10 +29,28 @@ public class DrawGameManager : MonoBehaviour
 		score = Mathf.Clamp(score + baseScore, 0f, 100f);
 		DrawComponent.isStarted = false;
 
+        defaultBusSize = ProgressBus.sizeDelta;
+
 		// Tween bus for animate score
-		ProgressBus.DOSizeDelta(new Vector2(ProgressBus.rect.width + busLength, ProgressBus.rect.height) * (score / 100f), timeToAnimateTextScore);
+		ProgressBus.DOSizeDelta(new Vector2(ProgressBus.rect.width + busLength, ProgressBus.rect.height), timeToAnimateTextScore);
 		StartCoroutine(AnimateScoreText());
 	}
+
+    public void GameReset()
+    {
+        score = 0f;
+        baseScore = 0f;
+
+        foreach (Transform child in DrawComponent.GroupDrawObjects)
+        {
+            Destroy(child.gameObject);
+        }
+
+        timerController.ResetTimer();
+        timerController.StartTimer();
+        ProgressBus.parent.gameObject.SetActive(false);
+        ProgressBus.sizeDelta = defaultBusSize;
+    }
 
 	private IEnumerator AnimateScoreText()
 	{
@@ -40,6 +61,6 @@ public class DrawGameManager : MonoBehaviour
 			startingScore += (Time.deltaTime / timeToAnimateTextScore) * score;
 			return startingScore < score;
 		});
-		scoreUI.SetText(score.ToString());
+		scoreUI.SetText(Mathf.RoundToInt(score).ToString());
 	}
 }
