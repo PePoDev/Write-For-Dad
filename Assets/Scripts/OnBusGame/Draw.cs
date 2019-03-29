@@ -32,7 +32,7 @@ public class Draw : MonoBehaviour
 
     private void Update()
     {
-        if (isStarted == false || (selectedIndex < 0 || !CanDrawOnPanel))
+        if (selectedIndex < 0 || !CanDrawOnPanel)
             return;
 
         if (isBrush)
@@ -40,6 +40,16 @@ public class Draw : MonoBehaviour
             // On touch or click began
             if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) || Input.GetMouseButtonDown(0))
             {
+                if (gameManager.timerController.isStarted == false)
+                {
+                    gameManager.timerController.StartTimer();
+                }
+
+                if (isStarted == false)
+                {
+                    return;
+                }
+
                 mRay = Cam.ScreenPointToRay(Input.mousePosition);
 
                 float rayDistance;
@@ -100,6 +110,15 @@ public class Draw : MonoBehaviour
         {
             if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) || Input.GetMouseButtonDown(0))
             {
+                if (gameManager.timerController.isStarted == false)
+                {
+                    gameManager.timerController.StartTimer();
+                }
+
+                if (isStarted == false)
+                {
+                    return;
+                }
                 Vector3 screenPos = Cam.ScreenToWorldPoint(Input.mousePosition);
                 SpriteRenderer obj = Instantiate(
                     paintPrefab[selectedIndex].GetComponent<SpriteRenderer>(),

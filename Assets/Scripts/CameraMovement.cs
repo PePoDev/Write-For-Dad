@@ -50,7 +50,7 @@ public class CameraMovement : MonoBehaviour
 		}
 	}
 
-	protected virtual void LateUpdate()
+	protected virtual void Update()
 	{
 		// Get the fingers we want to use
 		System.Collections.Generic.List<LeanFinger> fingers = LeanTouch.GetFingers(IgnoreStartedOverGui, IgnoreIsOverGui, RequiredFingerCount);

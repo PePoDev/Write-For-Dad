@@ -11,17 +11,12 @@ public class TimerController : MonoBehaviour
     public Sprite green, yellow, red;
     public TextMeshProUGUI TextToDisplay;
     public float TimeToCapture;
+    public bool isStarted = false;
 
     public UnityEvent OnTimeUp;
     public UnityEvent OnStart;
 
     private float _timer = 0;
-    private bool isStarted = false;
-
-    private void Start()
-    {
-        StartTimer();
-    }
 
     private void Update()
     {
@@ -29,11 +24,11 @@ public class TimerController : MonoBehaviour
         {
             _timer += Time.deltaTime;
 
-            if (TimeToCapture - _timer > 0f && TimeToCapture - _timer < 4f)
+            if (TimeToCapture - _timer > 0.99f && TimeToCapture - _timer < 4f)
             {
                 sign.sprite = yellow;
             }
-            else if (_timer > TimeToCapture - 1f)
+            else if (TimeToCapture - _timer < 1f)
             {
                 sign.sprite = red;
             }
