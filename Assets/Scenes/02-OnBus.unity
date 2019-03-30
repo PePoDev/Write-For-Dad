@@ -1029,7 +1029,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 662930979}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &331748474
 AudioSource:
@@ -1449,7 +1449,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c5afb367440332349b398cf33c16b3aa, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1742,13 +1742,13 @@ Transform:
   m_Children:
   - {fileID: 1169419688}
   - {fileID: 634418393}
-  - {fileID: 1290765152}
   - {fileID: 331748473}
+  - {fileID: 1290765152}
   - {fileID: 146360306}
   - {fileID: 285911914}
-  - {fileID: 1277642382}
-  - {fileID: 816025897}
   - {fileID: 1018671284}
+  - {fileID: 816025897}
+  - {fileID: 1277642382}
   - {fileID: 1574831033}
   - {fileID: 1010936101}
   m_Father: {fileID: 0}
@@ -1993,6 +1993,18 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
+    - {fileID: 1452792830}
+    ActiveGameObject: {fileID: 1452792830}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
     - {fileID: 1433063967}
     ActiveGameObject: {fileID: 1433063967}
     GUIDsList: []
@@ -2005,8 +2017,8 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 133281757}
-    ActiveGameObject: {fileID: 133281757}
+    - {fileID: 634418392}
+    ActiveGameObject: {fileID: 634418392}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -2017,8 +2029,44 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1431852809}
-    ActiveGameObject: {fileID: 1431852809}
+    - {fileID: 1018671283}
+    ActiveGameObject: {fileID: 1018671283}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 1277642381}
+    ActiveGameObject: {fileID: 1277642381}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 1574831032}
+    ActiveGameObject: {fileID: 1574831032}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 331748472}
+    ActiveGameObject: {fileID: 331748472}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -2041,8 +2089,32 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1452792830}
-    ActiveGameObject: {fileID: 1452792830}
+    - {fileID: 133281757}
+    ActiveGameObject: {fileID: 133281757}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 662930975}
+    ActiveGameObject: {fileID: 662930975}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 1431852809}
+    ActiveGameObject: {fileID: 1431852809}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -2119,68 +2191,8 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1574831032}
-    ActiveGameObject: {fileID: 1574831032}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 1018671283}
-    ActiveGameObject: {fileID: 1018671283}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 634418392}
-    ActiveGameObject: {fileID: 634418392}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 331748472}
-    ActiveGameObject: {fileID: 331748472}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
     - {fileID: 1243165186}
     ActiveGameObject: {fileID: 1243165186}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 662930975}
-    ActiveGameObject: {fileID: 662930975}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -2251,18 +2263,6 @@ MonoBehaviour:
     list:
     - {fileID: 816025896}
     ActiveGameObject: {fileID: 816025896}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 1277642381}
-    ActiveGameObject: {fileID: 1277642381}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -2652,7 +2652,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 662930979}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1018671285
 AudioSource:
@@ -3648,7 +3648,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 662930979}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1277642383
 AudioSource:
@@ -3775,7 +3775,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 662930979}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1290765153
 AudioSource:
@@ -4806,17 +4806,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 634418394}
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1441173247
@@ -5008,6 +4997,15 @@ MonoBehaviour:
   - {fileID: 1708970304}
   - {fileID: 1592471686}
   - {fileID: 599529571}
+  audioTimer: {fileID: 634418394}
+  audioBrushs:
+  - {fileID: 331748474}
+  - {fileID: 1290765153}
+  - {fileID: 146360307}
+  - {fileID: 285911915}
+  - {fileID: 1018671285}
+  - {fileID: 816025898}
+  - {fileID: 1277642383}
   mainCanvas: {fileID: 133281761}
   GroupDrawObjects: {fileID: 249857142}
 --- !u!4 &1452792832

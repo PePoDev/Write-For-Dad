@@ -8,6 +8,8 @@ public class Draw : MonoBehaviour
     public DrawGameManager gameManager;
     public GameObject[] trailBrushPrefab;
     public GameObject[] paintPrefab;
+    public AudioSource audioTimer;
+    public AudioSource[] audioBrushs;
     public RectTransform mainCanvas;
     public Transform GroupDrawObjects;
 
@@ -43,6 +45,7 @@ public class Draw : MonoBehaviour
                 if (gameManager.timerController.isStarted == false)
                 {
                     gameManager.timerController.StartTimer();
+                    audioTimer.Play();
                 }
 
                 if (isStarted == false)
@@ -74,6 +77,8 @@ public class Draw : MonoBehaviour
                         gameManager.baseScore = gameManager.baseScore < 70 ? 70 : gameManager.baseScore;
                         break;
                 }
+
+                audioBrushs[selectedIndex + (isBrush ? 0 : trailBrushPrefab.Length)].Play();
             }
 
             // On touch or click moved
@@ -92,6 +97,11 @@ public class Draw : MonoBehaviour
                 }
 
                 gameManager.score += 30f / 20f * Time.deltaTime;
+
+                if (audioBrushs[selectedIndex + (isBrush ? 0 : trailBrushPrefab.Length)].isPlaying == false)
+                {
+                    audioBrushs[selectedIndex + (isBrush ? 0 : trailBrushPrefab.Length)].Play();
+                }
             }
 
             // On touch or click end
@@ -104,14 +114,19 @@ public class Draw : MonoBehaviour
                 {
                     Destroy(currentTrail);
                 }
+
+                audioBrushs[selectedIndex + (isBrush ? 0 : trailBrushPrefab.Length)].Pause();
             }
         }
         else
         {
             if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) || Input.GetMouseButtonDown(0))
             {
+                audioBrushs[selectedIndex + (isBrush ? 0 : trailBrushPrefab.Length)].Play();
+
                 if (gameManager.timerController.isStarted == false)
                 {
+                    audioTimer.Play();
                     gameManager.timerController.StartTimer();
                 }
 
