@@ -19,6 +19,8 @@ public class DrawGameManager : MonoBehaviour
     public float busLength;
     public float timeToAnimateTextScore;
 
+	public bool isPlaying = false;
+
     public void OnStart()
     {
         DrawComponent.isStarted = true;
