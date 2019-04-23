@@ -19,8 +19,8 @@ public class ObjectMovement : MonoBehaviour
 		newPos.x = fixPosX;
 		newPos.y -= 1500f;
 
-		if (newPos.y > 30)
-			return;
+		if (newPos.y > 30f)
+			newPos.y = 30f;
 
 		rect.anchoredPosition = newPos;
 	}

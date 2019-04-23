@@ -24,7 +24,6 @@ public class AudioFadeWhenComeInPostion : MonoBehaviour
 		{
 			var avgg = cameraTransform.position.x - min;
 			BGM.volume = 0.3f - (avgg / avg) * 0.33f;
-			print(avgg / avg);
 		}
     }
 }
