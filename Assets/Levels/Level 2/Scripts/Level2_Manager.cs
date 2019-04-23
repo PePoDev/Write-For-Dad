@@ -20,11 +20,11 @@ public class Level2_Manager : MonoBehaviour
 	public float scaleSwipeMultiplier;
 	public float busLength;
 	public float timeToAnimateTextScore;
+	public int[] pushCount = new int[5];
 
 	private Vector2[] positionObjs = new Vector2[5];
 	private Vector2 defaultBusSize;
 
-	private int[] pushCount = new int[5];
 	private float score;
 	private bool showedTutorial = false;
 	private bool hasStarted = false;
@@ -165,33 +165,12 @@ public class Level2_Manager : MonoBehaviour
 	private float GetScore()
 	{
 		float _score = 0f;
-		int[] set = new int[4];
 
 		for (int i = 0; i < pushCount.Length; i++)
 		{
-			print(pushCount[i]);
-			set[pushCount[i] - 1]++;
+			_score += pushCount[i] * 5;
 		}
 
-		if (set[3] > 0)
-		{
-			return 100 - ((5 - set[3]) * 10);
-		}
-
-		if (set[2] > 0)
-		{
-			return 100 - ((4 - set[3]) * 10);
-		}
-
-		if (set[1] > 0)
-		{
-			return 100 - ((4 - set[3]) * 10);
-		}
-
-		if (set[0] > 0)
-		{
-			return 100 - ((4 - set[3]) * 10);
-		}
 		return _score;
 	}
 
@@ -199,10 +178,13 @@ public class Level2_Manager : MonoBehaviour
 	{
 		timerController.StopTimer();
 		timerController.ResetTimer();
+
+		ProgressBus.sizeDelta = defaultBusSize;
+
 		pushCount = new int[5];
 		score = 0f;
 		hasStarted = false;
-		isPlaying = false;
+		isPlaying = true;
 		for (int i = 0; i < transformObjs.Length; i++)
 		{
 			transformObjs[i].anchoredPosition = positionObjs[i];

@@ -21,7 +21,12 @@ public class DrawGameManager : MonoBehaviour
 
 	public bool isPlaying = false;
 
-    public void OnStart()
+	private void Start()
+	{
+		defaultBusSize = ProgressBus.sizeDelta;
+	}
+
+	public void OnStart()
     {
         DrawComponent.isStarted = true;
     }
@@ -30,8 +35,6 @@ public class DrawGameManager : MonoBehaviour
     {
         score = Mathf.Clamp(score + baseScore, 0f, 100f);
         DrawComponent.isStarted = false;
-
-        defaultBusSize = ProgressBus.sizeDelta;
 
         // Tween bus for animate score
         ProgressBus.DOSizeDelta(new Vector2(ProgressBus.rect.width + busLength, ProgressBus.rect.height), timeToAnimateTextScore);

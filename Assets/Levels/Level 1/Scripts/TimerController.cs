@@ -67,5 +67,7 @@ public class TimerController : MonoBehaviour
     public void ResetTimer()
     {
         _timer = 0;
-    }
+		sign.sprite = green;
+		TextToDisplay.SetText("20");
+	}
 }
