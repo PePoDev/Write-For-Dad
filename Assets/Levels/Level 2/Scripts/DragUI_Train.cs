@@ -20,7 +20,7 @@ public class DragUI_Train : MonoBehaviour
 	{
 		var newPos = Camera.main.ViewportToWorldPoint(Input.mousePosition);
 		newPos.y = fixPosY;
-		newPos.x += 4000f;
+		newPos.x += 4100f;
 
 		if (newPos.x < 7080f)
 		{
