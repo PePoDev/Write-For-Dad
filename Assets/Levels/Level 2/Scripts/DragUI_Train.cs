@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DragUI_Train : MonoBehaviour
 {
@@ -19,15 +17,16 @@ public class DragUI_Train : MonoBehaviour
 	public void OnDrag()
 	{
 		var newPos = Camera.main.ViewportToWorldPoint(Input.mousePosition);
-		newPos.y = fixPosY;
-		newPos.x += 4100f;
 
-		if (newPos.x < 7080f)
+		newPos.y = fixPosY;
+		//newPos.x += 4100f;
+
+		if (newPos.x < 6813)
 		{
-			newPos.x = 7080f;
+			newPos.x = 6813;
 		}
 
-		rect2.anchoredPosition = newPos + offset;
 		rect.anchoredPosition = newPos;
+		rect2.anchoredPosition = newPos + offset;
 	}
 }
