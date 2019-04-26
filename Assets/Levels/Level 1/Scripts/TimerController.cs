@@ -67,7 +67,8 @@ public class TimerController : MonoBehaviour
     public void ResetTimer()
     {
         _timer = 0;
+		TextToDisplay.SetText(Mathf.RoundToInt(TimeToCapture).ToString());
 		sign.sprite = green;
-		TextToDisplay.SetText("20");
+		
 	}
 }
