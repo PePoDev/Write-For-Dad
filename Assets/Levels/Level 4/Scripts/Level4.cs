@@ -1,4 +1,6 @@
 ﻿using DG.Tweening;
+using DG.Tweening.Core;
+using DG.Tweening.Plugins.Options;
 using System;
 using System.Collections;
 using TMPro;
@@ -10,7 +12,6 @@ public class Level4 : MonoBehaviour
 	public TimerController timerController;
 
 	public AudioSource Shot, Reload;
-	public AudioSource AudioScore, AudioBusScore;
 
 	public RectTransform ProgressBus;
 	public TextMeshProUGUI scoreUI;
@@ -23,6 +24,7 @@ public class Level4 : MonoBehaviour
 	public float busLength;
 	public float timeToAnimateTextScore;
 
+	private TweenerCore<Vector2, Vector2, VectorOptions> tempTweening;
 	private Vector2 defaultBusSize;
 
 	private int questionNumber = 0;
@@ -45,28 +47,21 @@ public class Level4 : MonoBehaviour
 	{
 		choiceSelectedIndex = item;
 		Shot.Play();
-	}
-	public void TimeUp()
-	{
 		Reload.Play();
-		if (choiceSelectedIndex == listOfCorrectAnswer[questionNumber])
-		{
-			correctAnswer++;
-			Games[questionNumber].SetActive(false);
-		}
 
+		correctAnswer += choiceSelectedIndex == listOfCorrectAnswer[questionNumber] ? 1 : 0;
+
+		Games[questionNumber].SetActive(false);
 		questionNumber++;
 
 		if (listOfCorrectAnswer.Length == questionNumber)
 		{
-			GameEnd();
+			timerController.StopTimer();
+			timerController.OnTimeUp.Invoke();
+			return;
 		}
-		else
-		{
-			Games[questionNumber].SetActive(true);
-			timerController.ResetTimer();
-			timerController.StartTimer();
-		}
+
+		Games[questionNumber].SetActive(true);
 	}
 	public void ShowTutorial()
 	{
@@ -85,13 +80,13 @@ public class Level4 : MonoBehaviour
 	}
 	public void GameEnd()
 	{
-		AudioScore.Play();
-		AudioBusScore.Play();
-		ProgressBus.parent.gameObject.SetActive(true);
+		score = correctAnswer == 0 ? 0 : 30 + (correctAnswer * 10);
+
 		StartCoroutine(AnimateScoreText());
 		IEnumerator AnimateScoreText()
 		{
-			ProgressBus.DOSizeDelta(new Vector2(ProgressBus.rect.width + busLength, ProgressBus.rect.height), timeToAnimateTextScore);
+			var progressScore = busLength * (score / 100f);
+			tempTweening = ProgressBus.DOSizeDelta(new Vector2(ProgressBus.rect.width + progressScore, ProgressBus.rect.height), timeToAnimateTextScore);
 			float startingScore = 0;
 			yield return new WaitWhile(() =>
 			{
@@ -104,10 +99,22 @@ public class Level4 : MonoBehaviour
 	}
 	public void GameReset()
 	{
+		if (tempTweening.IsPlaying())
+		{
+			tempTweening.Kill();
+		}
+
 		timerController.ResetTimer();
 		timerController.StartTimer();
 
 		ProgressBus.sizeDelta = defaultBusSize;
+		ProgressBus.parent.gameObject.SetActive(false);
+
+		Games[0].SetActive(true);
+		for (int i = 1; i < Games.Length; i++)
+		{
+			Games[i].SetActive(false);
+		}
 
 		questionNumber = 0;
 		choiceSelectedIndex = 0;

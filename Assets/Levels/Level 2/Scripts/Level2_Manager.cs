@@ -1,4 +1,6 @@
 ﻿using DG.Tweening;
+using DG.Tweening.Core;
+using DG.Tweening.Plugins.Options;
 using System;
 using System.Collections;
 using TMPro;
@@ -23,6 +25,7 @@ public class Level2_Manager : MonoBehaviour
 	public int[] pushCount = new int[5];
 
 	private Vector2[] positionObjs = new Vector2[5];
+	private TweenerCore<Vector2, Vector2, VectorOptions> tempTweening;
 	private Vector2 defaultBusSize;
 
 	private float score;
@@ -150,7 +153,8 @@ public class Level2_Manager : MonoBehaviour
 		StartCoroutine(AnimateScoreText());
 		IEnumerator AnimateScoreText()
 		{
-			ProgressBus.DOSizeDelta(new Vector2(ProgressBus.rect.width + busLength, ProgressBus.rect.height), timeToAnimateTextScore);
+			var progressScore = busLength * (score / 100f);
+			tempTweening = ProgressBus.DOSizeDelta(new Vector2(ProgressBus.rect.width + progressScore, ProgressBus.rect.height), timeToAnimateTextScore);
 			float startingScore = 0;
 			yield return new WaitWhile(() =>
 			{
@@ -176,9 +180,15 @@ public class Level2_Manager : MonoBehaviour
 
 	public void GameReset()
 	{
+		if (tempTweening.IsPlaying())
+		{
+			tempTweening.Kill();
+		}
+
 		timerController.StopTimer();
 		timerController.ResetTimer();
 
+		ProgressBus.parent.gameObject.SetActive(false);
 		ProgressBus.sizeDelta = defaultBusSize;
 
 		pushCount = new int[5];

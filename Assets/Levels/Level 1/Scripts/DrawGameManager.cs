@@ -1,4 +1,6 @@
 ﻿using DG.Tweening;
+using DG.Tweening.Core;
+using DG.Tweening.Plugins.Options;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -11,7 +13,8 @@ public class DrawGameManager : MonoBehaviour
     public RectTransform ProgressBus;
     public TextMeshProUGUI scoreUI;
 
-    private Vector2 defaultBusSize;
+	private TweenerCore<Vector2, Vector2, VectorOptions> tempTweening;
+	private Vector2 defaultBusSize;
 
     public float baseScore = 0;
     public float score = 0;
@@ -36,14 +39,20 @@ public class DrawGameManager : MonoBehaviour
         score = Mathf.Clamp(score + baseScore, 0f, 100f);
         DrawComponent.isStarted = false;
 
-        // Tween bus for animate score
-        ProgressBus.DOSizeDelta(new Vector2(ProgressBus.rect.width + busLength, ProgressBus.rect.height), timeToAnimateTextScore);
+		// Tween bus for animate score
+		var progressScore = busLength * (score / 100f);
+		tempTweening = ProgressBus.DOSizeDelta(new Vector2(ProgressBus.rect.width + progressScore, ProgressBus.rect.height), timeToAnimateTextScore);
         StartCoroutine(AnimateScoreText());
     }
 
     public void GameReset()
     {
-        score = 0f;
+		if (tempTweening.IsPlaying())
+		{
+			tempTweening.Kill();
+		}
+
+		score = 0f;
         baseScore = 0f;
 
         foreach (Transform child in DrawComponent.GroupDrawObjects)
@@ -53,6 +62,7 @@ public class DrawGameManager : MonoBehaviour
 
         timerController.StopTimer();
         timerController.ResetTimer();
+
         ProgressBus.parent.gameObject.SetActive(false);
         ProgressBus.sizeDelta = defaultBusSize;
     }
