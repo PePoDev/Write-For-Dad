@@ -2811,7 +2811,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3b9d6aff2306da947a5a8b5c67abda43, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 58a36cca97335194fb2f93f7c86f35f6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
@@ -4691,8 +4691,32 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1231709699}
-    ActiveGameObject: {fileID: 1231709699}
+    - {fileID: 634418392}
+    ActiveGameObject: {fileID: 634418392}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 1742332772}
+    ActiveGameObject: {fileID: 1742332772}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 840364048}
+    ActiveGameObject: {fileID: 840364048}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -4705,6 +4729,18 @@ MonoBehaviour:
     list:
     - {fileID: 133281757}
     ActiveGameObject: {fileID: 133281757}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 1231709699}
+    ActiveGameObject: {fileID: 1231709699}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -4753,18 +4789,6 @@ MonoBehaviour:
     list:
     - {fileID: 1107026483}
     ActiveGameObject: {fileID: 1107026483}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 1742332772}
-    ActiveGameObject: {fileID: 1742332772}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -4945,30 +4969,6 @@ MonoBehaviour:
     list:
     - {fileID: 474162929}
     ActiveGameObject: {fileID: 474162929}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 1879684418}
-    ActiveGameObject: {fileID: 1879684418}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 1511857308}
-    ActiveGameObject: {fileID: 1511857308}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -9461,7 +9461,7 @@ MonoBehaviour:
   yellow: {fileID: 21300000, guid: 14275fdd9b02a9043999b29e180ad0b5, type: 3}
   red: {fileID: 21300000, guid: f6cde412932f39b42a5430067518f4d8, type: 3}
   TextToDisplay: {fileID: 1687091340}
-  TimeToCapture: 5.5
+  TimeToCapture: 20.5
   isStarted: 0
   OnTimeUp:
     m_PersistentCalls:

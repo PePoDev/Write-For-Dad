@@ -1,5 +1,6 @@
 ﻿using Lean.Touch;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Camera))]
 public class CameraMovement : MonoBehaviour
@@ -27,6 +28,8 @@ public class CameraMovement : MonoBehaviour
 	public float Sensitivity = 1.0f;
 
 	public LeanScreenDepth ScreenDepth;
+
+	public UnityEvent OnEndScreen;
 
 	public virtual void SnapToSelection()
 	{
@@ -74,6 +77,7 @@ public class CameraMovement : MonoBehaviour
 		if (newPosition.x > Max.x)
 		{
 			newPosition.x = Max.x;
+			OnEndScreen.Invoke();
 		}
 
 		transform.position = newPosition;
