@@ -546,7 +546,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4ffbd954b5bc2c84f82e26b750a86ff7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d550f7b4c36af59438d03d8f66a23542, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -804,18 +804,6 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1204478453}
-    ActiveGameObject: {fileID: 1204478453}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
     - {fileID: 1145180821}
     ActiveGameObject: {fileID: 1145180821}
     GUIDsList: []
@@ -830,6 +818,18 @@ MonoBehaviour:
     list:
     - {fileID: 1334274004}
     ActiveGameObject: {fileID: 1334274004}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 1204478453}
+    ActiveGameObject: {fileID: 1204478453}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []

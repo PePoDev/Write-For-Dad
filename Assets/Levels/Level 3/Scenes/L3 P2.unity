@@ -230,6 +230,11 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 0
     Distance: -10
+  OnEndScreen:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -616,7 +621,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0eca230184061844dbd91417007f74af, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 15b80a6b6b4c47144a6b67fae67e0c6b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -795,8 +800,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 238.7, y: -674}
-  m_SizeDelta: {x: 142.3, y: 188.1}
+  m_AnchoredPosition: {x: 552.3, y: 79.525}
+  m_SizeDelta: {x: 115.8, y: 159.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1913338628
 MonoBehaviour:
@@ -1004,18 +1009,6 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 743340158}
-    ActiveGameObject: {fileID: 743340158}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
     - {fileID: 1913338626}
     ActiveGameObject: {fileID: 1913338626}
     GUIDsList: []
@@ -1042,6 +1035,30 @@ MonoBehaviour:
     list:
     - {fileID: 1145180821}
     ActiveGameObject: {fileID: 1145180821}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 1334274004}
+    ActiveGameObject: {fileID: 1334274004}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 743340158}
+    ActiveGameObject: {fileID: 743340158}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
