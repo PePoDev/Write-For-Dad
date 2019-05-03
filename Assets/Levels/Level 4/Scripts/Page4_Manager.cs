@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Page4_Manager : MonoBehaviour
 {
+	public AudioSource audioLiftBell;
+	[Space]
 	public Animator animator;
 	public GameObject[] floors;
 
@@ -25,6 +27,8 @@ public class Page4_Manager : MonoBehaviour
 			{
 				yield return new WaitForSeconds(LiftOpenDelay);
 			}
+
+			audioLiftBell.Play();
 
 			foreach (var item in floors)
 			{
