@@ -6,6 +6,8 @@ TagManager:
   tags:
   - point
   - block
+  - UIDraggable
+  - Target
   layers:
   - Default
   - TransparentFX
