@@ -365,14 +365,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 252215724}
+        m_MethodName: ExitWithDelay
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 3
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -1111,7 +1111,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &363138475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4223,8 +4223,8 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 736970110}
-    ActiveGameObject: {fileID: 736970110}
+    - {fileID: 68507257}
+    ActiveGameObject: {fileID: 68507257}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -4235,8 +4235,32 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 68507257}
-    ActiveGameObject: {fileID: 68507257}
+    - {fileID: 232507743}
+    ActiveGameObject: {fileID: 232507743}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 306443149}
+    ActiveGameObject: {fileID: 306443149}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 736970110}
+    ActiveGameObject: {fileID: 736970110}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -4481,30 +4505,6 @@ MonoBehaviour:
     - {fileID: 1525390302}
     - {fileID: 1495164440}
     ActiveGameObject: {fileID: 1547123779}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 1495164440}
-    ActiveGameObject: {fileID: 1495164440}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 1525390302}
-    ActiveGameObject: {fileID: 1525390302}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
