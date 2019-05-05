@@ -5818,6 +5818,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1742332773}
+        m_MethodName: OnTimeUpInvoke
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &856043065
@@ -6635,8 +6646,8 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1162235402}
-    ActiveGameObject: {fileID: 1162235402}
+    - {fileID: 843897157}
+    ActiveGameObject: {fileID: 843897157}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -6647,8 +6658,56 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1465384075}
-    ActiveGameObject: {fileID: 1465384075}
+    - {fileID: 1742332772}
+    ActiveGameObject: {fileID: 1742332772}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 1128191327}
+    ActiveGameObject: {fileID: 1128191327}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 1431852809}
+    ActiveGameObject: {fileID: 1431852809}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 1565045409}
+    ActiveGameObject: {fileID: 1565045409}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    PATHsList: []
+    PATHsActiveGameObject: 
+    InstanceID: 0
+    wasInit: 0
+    CashedBool: 0
+  - FavParams: 0
+    FavString: []
+    list:
+    - {fileID: 1162235402}
+    ActiveGameObject: {fileID: 1162235402}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -6671,8 +6730,8 @@ MonoBehaviour:
   - FavParams: 0
     FavString: []
     list:
-    - {fileID: 1742332772}
-    ActiveGameObject: {fileID: 1742332772}
+    - {fileID: 1465384075}
+    ActiveGameObject: {fileID: 1465384075}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -6697,18 +6756,6 @@ MonoBehaviour:
     list:
     - {fileID: 1243165186}
     ActiveGameObject: {fileID: 1243165186}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 1565045409}
-    ActiveGameObject: {fileID: 1565045409}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -6878,66 +6925,6 @@ MonoBehaviour:
     list:
     - {fileID: 193323792}
     ActiveGameObject: {fileID: 193323792}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 1274908679}
-    ActiveGameObject: {fileID: 1274908679}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 843897157}
-    - {fileID: 2089368640}
-    - {fileID: 2106386141}
-    - {fileID: 937781602}
-    - {fileID: 541040930}
-    - {fileID: 394536060}
-    - {fileID: 761057508}
-    - {fileID: 820421668}
-    - {fileID: 1532198308}
-    - {fileID: 811075627}
-    - {fileID: 1784486392}
-    - {fileID: 542500633}
-    - {fileID: 1814837479}
-    ActiveGameObject: {fileID: 843897157}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    PATHsList: []
-    PATHsActiveGameObject: 
-    InstanceID: 0
-    wasInit: 0
-    CashedBool: 0
-  - FavParams: 0
-    FavString: []
-    list:
-    - {fileID: 843897157}
-    - {fileID: 2089368640}
-    - {fileID: 2106386141}
-    - {fileID: 937781602}
-    - {fileID: 541040930}
-    - {fileID: 394536060}
-    - {fileID: 761057508}
-    - {fileID: 820421668}
-    - {fileID: 1532198308}
-    - {fileID: 811075627}
-    - {fileID: 1784486392}
-    - {fileID: 542500633}
-    - {fileID: 1814837479}
-    ActiveGameObject: {fileID: 1814837479}
     GUIDsList: []
     GUIDsActiveGameObject: 
     PATHsList: []
@@ -7917,6 +7904,80 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1128191327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1128191328}
+  - component: {fileID: 1128191330}
+  - component: {fileID: 1128191329}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1128191328
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128191327}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1431852810}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -434, y: -671.5}
+  m_SizeDelta: {x: 165.5, y: 193}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1128191329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128191327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 7f91d74fadbc7ca4ca03d17b6c0bc671, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1128191330
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128191327}
+  m_CullTransparentMesh: 0
 --- !u!1 &1162235402
 GameObject:
   m_ObjectHideFlags: 0
@@ -7958,7 +8019,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a4baf392186d0df4fbdb4cfeb8c417d1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c202742a522642541a57c6b5abc9c1e3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -9917,6 +9978,7 @@ RectTransform:
   - {fileID: 1243165187}
   - {fileID: 1433063968}
   - {fileID: 217372637}
+  - {fileID: 1128191328}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

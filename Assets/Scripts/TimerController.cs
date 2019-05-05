@@ -71,4 +71,10 @@ public class TimerController : MonoBehaviour
 		sign.sprite = green;
 		
 	}
+
+    public void OnTimeUpInvoke()
+    {
+        isStarted = false;
+        OnTimeUp.Invoke();
+    }
 }
