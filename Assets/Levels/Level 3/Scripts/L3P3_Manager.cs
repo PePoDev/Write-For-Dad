@@ -18,14 +18,22 @@ public class L3P3_Manager : MonoBehaviour
 	public GameObject tutorialButtonObj;
 	public GameObject tutorialDialogObj;
 
+	public Transform RootScoreTrigger;
+	public Transform BusTransform;
+
+	public float score { get; set; } = 0;
+
 	private TweenerCore<Vector2, Vector2, VectorOptions> tempTweening;
 	private Vector2 defaultBusSize;
+	private Vector3 StartedBusPosition;
+	private Vector3 StartedBusRotation;
 
 	private bool showedTutorial = false;
-	private float score = 0f;
 
 	private void Start()
 	{
+		StartedBusPosition = BusTransform.position;
+		StartedBusRotation = BusTransform.eulerAngles;
 		defaultBusSize = ProgressBus.sizeDelta;
 	}
 
@@ -46,8 +54,6 @@ public class L3P3_Manager : MonoBehaviour
 	}
 	public void GameEnd()
 	{
-		score = 0;
-
 		StartCoroutine(AnimateScoreText());
 		IEnumerator AnimateScoreText()
 		{
@@ -65,10 +71,18 @@ public class L3P3_Manager : MonoBehaviour
 	}
 	public void GameReset()
 	{
+		foreach (Transform item in RootScoreTrigger)
+		{
+			item.gameObject.SetActive(true);
+		}
+
 		if (tempTweening.IsPlaying())
 		{
 			tempTweening.Kill();
 		}
+
+		BusTransform.position = StartedBusPosition;
+		BusTransform.eulerAngles = StartedBusRotation;
 
 		timerController.ResetTimer();
 		timerController.StartTimer();

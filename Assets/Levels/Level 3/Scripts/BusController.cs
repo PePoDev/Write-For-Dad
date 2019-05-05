@@ -1,9 +1,12 @@
 ﻿using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class BusController : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+	public UnityEvent OnBeginDragEvent;
+	public UnityEvent OnEndDragEvent;
 	public float duration;
 
 	private Camera m_Camera;
@@ -17,6 +20,7 @@ public class BusController : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 	public void OnBeginDrag(PointerEventData eventData)
 	{
 		m_isRight = true;
+		OnBeginDragEvent.Invoke();
 	}
 
 	public void OnDrag(PointerEventData eventData)
@@ -37,6 +41,7 @@ public class BusController : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 				if (hit.collider.tag.Equals("block"))
 				{
 					m_isRight = false;
+					OnEndDragEvent.Invoke();
 				}
 			}
 		}
@@ -45,5 +50,6 @@ public class BusController : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 	public void OnEndDrag(PointerEventData eventData)
 	{
 		m_isRight = false;
+		OnEndDragEvent.Invoke();
 	}
 }
