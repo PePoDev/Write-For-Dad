@@ -54,6 +54,6 @@ EditorBuildSettings:
     path: Assets/Levels/Level 4/Scenes/L4 P4.unity
     guid: 689bfabb139f0e34d825620ba8664322
   - enabled: 1
-    path: Assets/Levels/Close/Colse - Page 1.unity
+    path: Assets/Levels/Close/Colse.unity
     guid: ca2b21c3dc18b274c8d1533efd35c94d
   m_configObjects: {}
