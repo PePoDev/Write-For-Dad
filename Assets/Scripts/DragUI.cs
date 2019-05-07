@@ -1,5 +1,6 @@
 ﻿using Lean.Touch;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DragUI : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class DragUI : MonoBehaviour
 
 	[Tooltip("The camera the translation will be calculated using (None = MainCamera)")]
 	public Camera Camera;
+
+	public UnityEvent OnDragEndAtLeft;
 
 #if UNITY_EDITOR
 	protected virtual void Reset()
@@ -89,6 +92,7 @@ public class DragUI : MonoBehaviour
 			if (newPos.x < minDragable.x)
 			{
 				newPos.x = minDragable.x;
+				OnDragEndAtLeft.Invoke();
 			}
 
 			if (newPos.y < minDragable.y)

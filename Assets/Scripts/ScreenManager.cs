@@ -13,6 +13,11 @@ public class ScreenManager : MonoBehaviour
         Initiate.Fade(SceneManager.GetActiveScene().buildIndex + 1, Color.black, 1f);
     }
 
+	public void Quit()
+	{
+		Application.Quit();
+	}
+
     public void LoadMenuScene(float delay)
     {
         StartCoroutine(LoadSceneByDeleyTime(delay));
